@@ -725,24 +725,6 @@ Request timeout
 
 The Telegram bot should also reject excessively large payloads.
 
----
-
-# ⚠️ Important Limitations
-
-Amanak is a **risk-assessment tool**, not an oracle.
-
-A legitimate message can sometimes look suspicious.
-
-A sophisticated scam can sometimes bypass automated detection.
-
-Therefore:
-
-> **Amanak should help users pause and verify — not make irreversible financial decisions for them.**
-
-For financial, government, banking, or account-security messages, users should verify information through the organization's official website, application, phone number, or physical branch.
-
----
-
 
 
 ---
@@ -814,22 +796,6 @@ Security reports should include:
 
 Do not include real victims' personal information, credentials, financial information, or private messages in a report.
 
----
-
-# 📜 License
-
-Amanak is provided as a prototype for **educational and humanitarian purposes**.
-
-It is not a:
-
-* Legal service
-* Financial advisory service
-* Banking security service
-* Emergency-response service
-
-The software is intended to help people **identify suspicious communication and pause before taking risky actions**.
-
----
 
 # 🇪🇬 Amanak
 
