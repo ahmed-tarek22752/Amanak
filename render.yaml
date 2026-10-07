@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: amanak
+    env: python
+    plan: free
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port 10000
+    envVars:
+      - key: ENVIRONMENT
+        value: production
+      - key: DATABASE_URL
+        value: sqlite:///./amanak.db
+      - key: ENABLE_WHATSAPP
+        value: false
+      - key: ENABLE_VOICE
+        value: false
+      - key: ENABLE_FAMILY_ALERT
+        value: false
+      - key: ENABLE_AI
+        value: false

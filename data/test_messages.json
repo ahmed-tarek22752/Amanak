@@ -1,0 +1,637 @@
+[
+  {
+    "text": "مبروك! ربحت جايزة من Vodafone، لازم تدفع 250 جنيه رسوم التسجيل خلال 24 ساعة فقط.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "حسابك موقوف، اكتب كلمة السر فوراً لتفعيل الحساب قبل إغلاقه.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "تم تعليق بطاقتك من البنك، أرسل رقم البطاقة والرقم السري الآن.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "خلال 24 ساعة فقط، أنت من الفائزين في جائزة Orange، لازم ترد على الرسالة فوراً.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "لأقفال الشحنة، يجب دفع رسوم جمرك 600 جنيه الآن عبر Aramex.",
+    "expected_verdict": "scam",
+    "type": "delivery"
+  },
+  {
+    "text": "تم اكتشاف تأخير في الشحنة من DHL، لازم تدفع رسوم الشحن لتسليمها.",
+    "expected_verdict": "scam",
+    "type": "delivery"
+  },
+  {
+    "text": "أنت مستحق دعم كهرباء، ارسل صورة بطاقة الرقم القومي واسم البنك لتأكيد الاستحقاق.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "معلومة عاجلة: فاتورتك متأخرة، اكتب بياناتك الآن لتجنب الخصم.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "عرض شغل مضمون، أرسل 300 جنيه مصروفات البداية قبل التوظيف.",
+    "expected_verdict": "scam",
+    "type": "job_offer"
+  },
+  {
+    "text": "مطلوب موظف سريع، لازم تدفع 200 جنيه كرسوم تدريب قبل العمل.",
+    "expected_verdict": "scam",
+    "type": "job_offer"
+  },
+  {
+    "text": "استثمر 1000 جنيه في عملة رقمية وضاعف فلوسك خلال 7 أيام فقط.",
+    "expected_verdict": "scam",
+    "type": "investment"
+  },
+  {
+    "text": "أرباح مزدوجة في BTC، ابدأ اليوم وارجع ضعف المبلغ خلال 3 أيام.",
+    "expected_verdict": "scam",
+    "type": "investment"
+  },
+  {
+    "text": "أنا في مشكلة، غيرت رقمي، أحتاج 500 جنيه الآن لو سمحت.",
+    "expected_verdict": "scam",
+    "type": "family_impersonation"
+  },
+  {
+    "text": "أنا في المستشفى، ابعتلي فلوس فوراً، رقم جديد الآن.",
+    "expected_verdict": "scam",
+    "type": "family_impersonation"
+  },
+  {
+    "text": "اهتمامك بمشروع جمعيات الخير، لازم تدفع 250 جنيه مقدم قبل التبرع.",
+    "expected_verdict": "scam",
+    "type": "romance"
+  },
+  {
+    "text": "تمت إضافة شحنة جديدة، املأ النموذج وادفع رسوم الاستلام الآن.",
+    "expected_verdict": "scam",
+    "type": "delivery"
+  },
+  {
+    "text": "حسابك تم اختراقه، اضغط الرابط وكلمة السر المطلوبة الآن.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "التحويل ضروري الآن عبر Vodafone Cash لإيقاف التجميد.",
+    "expected_verdict": "scam",
+    "type": "wallet"
+  },
+  {
+    "text": "فوري: أرسل المبلغ عبر InstaPay لأن الخدمة متوقفة.",
+    "expected_verdict": "scam",
+    "type": "wallet"
+  },
+  {
+    "text": "ربحت 20 ألف جنيه من مسابقة Fawry، اكتب بياناتك في الرابط.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "من خدمة الكهرباء: دفع الفاتورة الآن لضمان عدم القطع.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "من مكتب الضرائب: ارسل رقم البطاقة والرقم القومي لتأكيد الملف.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "الأخير: مكافأة صرف مخصصة لك من WE، ادخل الرابط وادفع الرسوم.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "التطبيق يتطلب OTP وPIN لتأكيد التحويل الآن.",
+    "expected_verdict": "scam",
+    "type": "wallet"
+  },
+  {
+    "text": "الرسالة الرسمية تقول: كل من لم يرسل رقم بطاقة كريديت سيتم إيقاف الخدمة.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "أخوك غير الرقم، سيغلق الحساب إذا لم ترد الآن.",
+    "expected_verdict": "scam",
+    "type": "family_impersonation"
+  },
+  {
+    "text": "تم تجميد حسابك في CIB، اضغط الرابط فوراً وادخل الرقم السري.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "موقع استثمار جديد: ابدأ بـ 800 جنيه واستثمرها وضاعفها خلال أسبوع.",
+    "expected_verdict": "scam",
+    "type": "investment"
+  },
+  {
+    "text": "تذكير: آخر فرصة للربح من شركة استثمار، لا تضيع الفرصة.",
+    "expected_verdict": "scam",
+    "type": "investment"
+  },
+  {
+    "text": "قرض بدون فوائد، بس لازم تودع 500 جنيه كضمان أولي.",
+    "expected_verdict": "scam",
+    "type": "job_offer"
+  },
+  {
+    "text": "فيه مكافأة من Orange، ارسل رقم البطاقة والCVV الآن.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "شحنة من Bosta متوقفة، لازم تدفع 350 جنيه لإتمام التسليم.",
+    "expected_verdict": "scam",
+    "type": "delivery"
+  },
+  {
+    "text": "من وزارة الكهرباء: مخصصات الدعم مستحقة، أرسل الرقم القومي الآن.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "مبروك! فزت بجائزة Vodafone Cash، املأ بياناتك داخل الرابط الآن.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "إدارة البنك تطلب تحديث بياناتك، اكتب كلمة السر فوراً في الرابط.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "احتياج عاجل، لا تنتظر، أرسل تحويل 1000 جنيه الآن.",
+    "expected_verdict": "scam",
+    "type": "wallet"
+  },
+  {
+    "text": "بارك الله طيب، لقد فزت بجائزة WE، ادفع رسوم التفعيل خلال ساعة.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "السحب اليومي يطلب منكم رقم بطاقة لتأكيد الفوز.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "هذا هو الرقم الجديد، أحتاج 300 جنيه فوراً لو سمحت.",
+    "expected_verdict": "scam",
+    "type": "family_impersonation"
+  },
+  {
+    "text": "أنت مستحق دعم من وزارة التضامن، ارسل بطاقة الرقم القومي الآن.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "من خدمة فواتير الغاز: تم تعليق الحساب، اكتب كلمة السر بسرعة.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "لخدمة ما بعد البيع، لازم تشتري أحد المنتجات بمبلغ 250 جنيه أولاً.",
+    "expected_verdict": "scam",
+    "type": "job_offer"
+  },
+  {
+    "text": "مبروك! أنت متاح لك فوز بقيمة 5000 جنيه من شركة e&.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  },
+  {
+    "text": "بنك CIB التابع لك يطلب منك إرسال الرقم السري داخل الرابط.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "التحويل عبر Fawry ضروري الآن لتثبيت الحساب.",
+    "expected_verdict": "scam",
+    "type": "wallet"
+  },
+  {
+    "text": "أنت مستحق أرباح مؤسسة خيرية، ارسل 120 جنيه كضمان لمشاركة البند.",
+    "expected_verdict": "scam",
+    "type": "romance"
+  },
+  {
+    "text": "لا يوجد وقت، تم تخصيص لك فرصة عمل، ارسل 150 جنيه في الحال.",
+    "expected_verdict": "scam",
+    "type": "job_offer"
+  },
+  {
+    "text": "خلال 30 دقيقة فقط سيُغلق الرابط، لازم تفتح وتدخل كلمة السر.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "تم تعليق حملتك على الانترنت، اضغط الرابط لتفعيل الحساب الآن.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "سحب مجاني من Vodafone Cash، يحتاج OTP لتفعيل المكافأة.",
+    "expected_verdict": "scam",
+    "type": "wallet"
+  },
+  {
+    "text": "تم خصم رسوم من حسابك، إذا كنت تريد إلغاءها أرسل الرقم السري الآن.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "تجمعي من الاستثمارات يوعَد بربح مضاعف خلال 5 أيام.",
+    "expected_verdict": "scam",
+    "type": "investment"
+  },
+  {
+    "text": "تبعت الرسالة من شركتك: ارسل 450 جنيه كرسوم مقدم للوظيفة.",
+    "expected_verdict": "scam",
+    "type": "job_offer"
+  },
+  {
+    "text": "مستحق أموالك من الشركة، لازم تدفع رسوم التفعيل قبل الدفع.",
+    "expected_verdict": "scam",
+    "type": "job_offer"
+  },
+  {
+    "text": "احذر! آخر فرصة لتفعيل رصيدك، ارسل الكود الآن.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "دفع الفاتورة الآن يمنع منع الخصم، اكتب الرقم القومي فوراً.",
+    "expected_verdict": "scam",
+    "type": "government"
+  },
+  {
+    "text": "للجمعية الخيرية، لازم تبرع 100 جنيه لتأكيد المساعدة.",
+    "expected_verdict": "scam",
+    "type": "romance"
+  },
+  {
+    "text": "تم تجميد محفظتك، أرسل تحويل فوري عبر InstaPay.",
+    "expected_verdict": "scam",
+    "type": "wallet"
+  },
+  {
+    "text": "رسالة من بريد البنك: الحساب متوقف، اكتب الكود داخل الرابط فوراً.",
+    "expected_verdict": "scam",
+    "type": "bank"
+  },
+  {
+    "text": "كود التفعيل الخاص بك هو 1842. لا تشارك هذا الكود مع أي شخص.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "البنك لا يطلب منك مشاركة كلمة السر أو CVV عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "التطبيق الرسمي يوضح كل تفاصيل الطلب ولا نطلب أي أرقام بطاقة.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "تم تأكيد الشحنة بنجاح، لا توجد أي رسوم إضافية أو خصومات.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "هذا تحديث من خدمة العملاء الرسمية، لا داعي لتحويل أي مبلغ.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "معلوماتك محفوظة في التطبيق الرسمي، ولا يتم طلب صورة البطاقة أو الرقم القومي.",
+    "expected_verdict": "safe",
+    "type": "government"
+  },
+  {
+    "text": "تأكد من أنك تتواصل من الموقع الرسمي فقط، لا توجد أي طلبات للدفع مقدمًا.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "الشركة لا تطلب منك مشاركة كلمة السر أو رقم البطاقة عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "التفاصيل موجودة في التطبيق الرسمي فقط ولا يوجد ربط خارجي مطلوب.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "تم توصيل الطلب في الموعد المحدد، لا توجد أي رسوم إضافية.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "رقم التفعيل 8751. لا تشارك هذا الرقم مع أحد.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "رسالة تأكيد من البنك: لا تشارك هذا الكود مع أحد.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "الحساب الرسمي لا يطلب منك كلمة سر أو CVV في الرسالة.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "الفاتورة تمت مراجعتها من الموقع الرسمي ولا يوجد أي طلب جديد.",
+    "expected_verdict": "safe",
+    "type": "government"
+  },
+  {
+    "text": "الاستلام تم من خلال التطبيق الرسمي، لا توجد أي رسوم إضافية.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "فرصة العمل موجودة على الموقع الرسمي للشركة فقط، لا توجد أي دفعات أولية.",
+    "expected_verdict": "safe",
+    "type": "job_offer"
+  },
+  {
+    "text": "البوابة الرسمية هي الطريق الوحيد للتواصل ولا نطلب أي تحويلات.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "لا يوجد أي دعم مستحق بهذه الرسالة، وكل التفاصيل في التطبيق الرسمي.",
+    "expected_verdict": "safe",
+    "type": "government"
+  },
+  {
+    "text": "هذا هو رقم خدمة العملاء الرسمي، لا توجد أي رسوم مسبقة.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "تمت الموافقة على الطلب من خلال التطبيق الرسمي، لا يوجد أي مبلغ مطلوب الآن.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "الرسالة الرسمية تنصح بعدم مشاركة الكود أو كلمة السر.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "رابط التفعيل موجود داخل التطبيق الرسمي فقط، وليس في الرسالة.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "لا نطلب منك أي أرقام بطاقة أو CVV عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "التحديث الخاص بالشحنة يأتي عبر التطبيق الرسمي فقط.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "تم إلغاء أي رسوماً إضافية، لا توجد تكاليف جديدة.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "رقم خدمة العملاء الرسمي موجود على الموقع، لا نتحدث عن أي دفعات أولية.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "هذا الإشعار أن الشركة لا تطلب كلمة السر أو الكود في الرسالة.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "الخط الرسمي فقط، لا توجد أي خيارات دفع عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "تم مراجعة الفاتورة، لا توجد أي مواعيد أو رسوم عاجلة.",
+    "expected_verdict": "safe",
+    "type": "government"
+  },
+  {
+    "text": "التواصل الرسمي يكون عبر التطبيق ولا نطلب تحويلات مالية.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "كل شيء تم في النظام الرسمي، لا داعي لدفع أي مبالغ.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "بنكنا لا يطلب منك مشاركة الكود أو كلمة السر عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "واجهة الدفع الرسمية لا تتطلب بطاقات أو CVV خارج التطبيق.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "تم تأكيد الطلب في النظام الرسمي، لا توجد رسوم متأخرة.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "هذا رقم خدمة رسمي، لا توجد أي مطالبات مالية في الرسالة.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "تمت مراجعة الحساب، ولا نطلب منك أي كلمة سر عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "لن نطلب منك أي بيانات شخصية أو صور بطاقات في الرسالة.",
+    "expected_verdict": "safe",
+    "type": "government"
+  },
+  {
+    "text": "المشكلة تم حلها في التطبيق الرسمي، لا داعي لأي تحويل الآن.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "التحديث عن الطلب موجود داخل التطبيق الرسمي فقط.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "أهلاً، هذه رسالة توضيح فقط، لا توجد أي طلبات للفلوس الآن.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "رسالة تأكيد: لا يطلب البنك أبدًا كودك أو كلمة سر عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "أرقام التفعيل تُرسل داخل التطبيق فقط، لا تشاركها عبر الرسائل.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "تم إرسال فاتورة رسمية على البريد الإلكتروني الرسمي فقط.",
+    "expected_verdict": "safe",
+    "type": "government"
+  },
+  {
+    "text": "لا توجد أي رسوم إضافية على الشحنة التالية.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "الوصول إلى الطلب عبر التطبيق الرسمي ولا تتطلب أي تحويل.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "موقع الشركة الرسمي فقط، لا يوجد أي رابط غير موثوق.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "هذا ليس طلبًا لدفع، فقط تفاصيل مركزية في التطبيق.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "تم توضيح تفاصيل الفاتورة في البريد الرسمي، لا توجد أي معوقات.",
+    "expected_verdict": "safe",
+    "type": "government"
+  },
+  {
+    "text": "سألتقي مع العائلة في البيت بعد الظهر، لا داعي للقلق.",
+    "expected_verdict": "safe",
+    "type": "family"
+  },
+  {
+    "text": "شركة العمل لا تطلب أي دفع مقدم قبل التوظيف.",
+    "expected_verdict": "safe",
+    "type": "job_offer"
+  },
+  {
+    "text": "الاستلام الرسمي من المكتب لا يحتاج إلّا للاتصال الرسمي.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "كل رسالة رسمية توضح أنها لا تطلب كلمة سر أو CVV.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "تم تأكيد المبلغ في التطبيق الرسمي فقط.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "لا داعي لدفع أي مبالغ، كل شيء في النظام الرسمي.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "هناك كود في التطبيق فقط، وليس في الرسالة أو الرابط.",
+    "expected_verdict": "safe",
+    "type": "bank_notice"
+  },
+  {
+    "text": "منصة الشركة الرسمية تشرح أن التفعيل لا يتطلب رقم بطاقة.",
+    "expected_verdict": "safe",
+    "type": "service"
+  },
+  {
+    "text": "أهلاً، هذا تحديث رسمي من الشحنة ولا توجد أي رسوماً متأخرة.",
+    "expected_verdict": "safe",
+    "type": "delivery"
+  },
+  {
+    "text": "لا تشارك كلمة السر الآن لأن الحساب يحتاج مراجعة فورية.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "لا تشارك الكود الآن، هذا أمر مهم لعدم إيقاف الحساب.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "إذا كنت مترددًا، تحقق من الرسالة قبل أن تعطي أي رقم.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "هل هذا رسالة حقيقية؟ لا تعطي كلمة السر حتى تتأكد من جهة الاتصال.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "يُطلب منك كود الآن، تأكد من مصدر الرسالة قبل التفاعل.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "من الأفضل أن تتأكد من الرسالة قبل مشاركة رقمك السري.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "لا ترد على هذا الرقم قبل أمان من الطرف الآخر.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "الرسالة تستدعي إجراء سريع، لكن حدد مصدرها أولاً.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "يفضل الاتصال على الرقم الأساسي للتحقق قبل إرسال أي كود.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "تحقق من الرسالة قبل مشاركة أي بيانات شخصية أو كود.",
+    "expected_verdict": "caution",
+    "type": "warning"
+  },
+  {
+    "text": "أنت من الفائزين، أرسل رقم البطاقة الآن لتفعيل الجائزة قبل الساعة 6 مساءً.",
+    "expected_verdict": "scam",
+    "type": "fake_prize"
+  }
+]

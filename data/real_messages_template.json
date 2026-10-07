@@ -1,0 +1,37 @@
+[
+  {
+    "text": "رسالة من رقم جديد: أنا في المستشفى، محتاج 700 جنيه الآن، ابعت المبلغ فورًا.",
+    "expected_verdict": "scam",
+    "type": "family_impersonation",
+    "note": "fictional example: emergency money request",
+    "fictional": true
+  },
+  {
+    "text": "مبروك! فزت بجائزة، اكتب رقم بطاقتك الآن لتفعيل المكافأة قبل 6 مساءً.",
+    "expected_verdict": "scam",
+    "type": "fake_prize",
+    "note": "fictional example: fake prize",
+    "fictional": true
+  },
+  {
+    "text": "تم تعليق حسابك في البنك، اضغط الرابط وخلّي الكود في الحقل فورًا.",
+    "expected_verdict": "scam",
+    "type": "bank",
+    "note": "fictional example: fake bank alert",
+    "fictional": true
+  },
+  {
+    "text": "شركة العمل لا تطلب أي دفع مقدم قبل التوظيف.",
+    "expected_verdict": "safe",
+    "type": "service",
+    "note": "fictional example: legitimate job notice",
+    "fictional": true
+  },
+  {
+    "text": "تم إرسال فاتورة رسمية على البريد الإلكتروني الرسمي فقط، ولا داعي لأي تحويل الآن.",
+    "expected_verdict": "safe",
+    "type": "service",
+    "note": "fictional example: official notice",
+    "fictional": true
+  }
+]
