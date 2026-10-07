@@ -309,6 +309,13 @@ AUTHENTICATION TOKEN
 ```
 
 ---
+<p align="center">
+  <img src="data/Amanak_%20Secure%20Family%20Scam%20Protection.png"
+       alt="Wireless Network Security Research"
+       width="100%">
+</p>
+
+
 
 #  Risk Levels
 
