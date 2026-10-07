@@ -412,9 +412,18 @@ https://example-suspicious-domain.com/winner
 بدل الضغط على الرابط الموجود في الرسالة.
 ```
 
+
+<p align="center">
+  <img src="/data/Amanak%20Scam-Checking%20Bot%20Interface.png"
+       alt="Wireless Network Security Research"
+       width="100%">
+</p>
+
+
+
 ---
 
-# 📊 Anonymous Dashboard
+#  Dashboard
 
 Amanak can provide an administrative dashboard containing aggregated statistics.
 
