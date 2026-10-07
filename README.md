@@ -4,6 +4,11 @@
 
 **Amanak** is a free scam-detection assistant built for Egyptian families. It analyzes suspicious messages, links, and scam patterns and explains the risk in **simple Egyptian Arabic** — without requiring users to understand cybersecurity terminology.
 
+<p align="center">
+  <img src="scripts/Wireless%20Network%20Security%20Research.png"
+       alt="Wireless Network Security Research"
+       width="100%">
+</p>
 > **"قبل ما تدفع، ابعت لأمانك."**
 > *Before you pay, send it to Amanak.*
 
