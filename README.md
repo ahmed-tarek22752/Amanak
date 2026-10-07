@@ -603,7 +603,7 @@ The production webhook should:
 
 ---
 
-# 🧪 Testing
+#  Testing
 
 Run the complete test suite:
 
@@ -727,43 +727,7 @@ For financial, government, banking, or account-security messages, users should v
 
 ---
 
-# 🗺️ Roadmap
 
-### Phase 1 — Core
-
-* [x] Rule-based scam detection
-* [x] URL analysis
-* [x] Egyptian Arabic responses
-* [x] English fallback
-* [x] Telegram support
-* [x] SQLite metadata storage
-
-### Phase 2 — Protection
-
-* [ ] Improved phishing detection
-* [ ] Domain reputation intelligence
-* [ ] Look-alike domain detection
-* [ ] OCR
-* [ ] Voice transcription
-* [ ] Better abuse prevention
-* [ ] Family safety alerts
-
-### Phase 3 — Expansion
-
-* [ ] WhatsApp production integration
-* [ ] Messenger
-* [ ] SMS workflows
-* [ ] More Egyptian dialect patterns
-* [ ] Community reporting
-* [ ] Scam trend intelligence
-
-### Phase 4 — Intelligence
-
-* [ ] Improved contextual analysis
-* [ ] Scam campaign clustering
-* [ ] Anonymous threat intelligence
-* [ ] Real-time scam trend detection
-* [ ] Community-driven detection rules
 
 ---
 
