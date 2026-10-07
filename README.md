@@ -1,126 +1,855 @@
-# Amanak: a free scam-checking bot for Egyptian families
+# 🛡️ Amanak — أمانك
 
-Amanak (أمانك) is a free chatbot that helps Egyptian families decide whether a suspicious message is likely a scam. The bot explains risk in simple Egyptian Arabic and is designed for older relatives and people who do not trust complicated tech terms.
+### Your family's second opinion on suspicious messages.
 
-## Tagline
+**Amanak** is a free scam-detection assistant built for Egyptian families. It analyzes suspicious messages, links, and scam patterns and explains the risk in **simple Egyptian Arabic** — without requiring users to understand cybersecurity terminology.
 
-"Your family's second opinion on suspicious messages."
+> **"قبل ما تدفع، ابعت لأمانك."**
+> *Before you pay, send it to Amanak.*
 
-## Story and problem
+---
 
-Scam messages in Egypt often arrive by SMS, WhatsApp, Telegram, or forwarded family chats. Many people get a message that sounds urgent, asks for money, or claims they won a prize or that a bill is due. The goal of Amanak is to make that first warning simple, fast, and understandable without requiring a paid service.
+## 🇪🇬 Why Amanak?
 
-## Features
+Scams don't always look like scams.
 
-- Rule-based scam analysis with URL risk checks
-- Simple Egyptian Arabic replies for non-technical users
-- English fallbacks when the user writes in English
-- Telegram support with commands and rate limiting
-- Optional WhatsApp integration behind feature flags
-- SQLite storage with limited metadata only
-- Dashboard for anonymous stats
-- OCR and optional voice transcription behind configuration flags
+A message may claim:
 
-## Screenshots
+* 💰 You won a prize
+* 🏦 Your bank account will be suspended
+* 📦 Your package needs a payment
+* 💳 Your card requires verification
+* 📱 Your WhatsApp account is at risk
+* 🧾 You have an unpaid bill
+* 👨‍👩‍👧 A family member urgently needs money
+* 🔗 You need to click a link to "confirm" something
 
-- Screenshot placeholder: Telegram chat with a scam verdict
-- Screenshot placeholder: dashboard overview
-- Screenshot placeholder: family safety alert card
+For technically experienced users, these messages may be obvious.
 
-## Architecture
+For parents, grandparents, and less technical family members, they may look completely legitimate.
+
+**Amanak provides a simple second opinion before the user clicks, pays, or shares information.**
+
+---
+
+# ✨ What Amanak Does
+
+A user can forward a suspicious message to Amanak.
+
+Amanak analyzes the message and returns:
+
+```text
+🚨 غالبًا دي رسالة نصب
+
+درجة الخطورة: 🔴 عالية
+
+ليه؟
+• الرابط مش موثوق
+• الرسالة بتطلب بيانات شخصية
+• فيها استعجال وضغط عليك
+• طريقة الكلام شبيهة برسائل النصب المعروفة
+
+❌ متضغطش على اللينك
+❌ متبعتش بياناتك
+❌ متحولش فلوس
+
+لو مش متأكد، تواصل مع الجهة الرسمية من موقعها الحقيقي.
+```
+
+The goal is not simply to say **"scam"**.
+
+The goal is to explain **why** the message is suspicious and tell the user **what to do next**.
+
+---
+
+# 🚀 Core Features
+
+### 🔍 Scam Detection
+
+Rule-based analysis identifies common scam indicators including:
+
+* Suspicious URLs
+* Domain anomalies
+* Urgency and pressure
+* Requests for money
+* Credential requests
+* Prize/lottery scams
+* Fake delivery messages
+* Account suspension claims
+* Impersonation patterns
+* Social-engineering language
+
+### 🔗 URL Risk Analysis
+
+Amanak can inspect links for suspicious characteristics such as:
+
+* URL structure
+* Suspicious domains
+* Look-alike domains
+* HTTP vs HTTPS
+* Unusual redirects
+* IP-based URLs
+* URL shorteners
+* Suspicious TLDs
+* Known risk indicators
+
+### 🇪🇬 Egyptian Arabic
+
+The response layer is designed around everyday Egyptian Arabic rather than technical cybersecurity terminology.
+
+Instead of:
+
+> "The message contains indicators consistent with credential phishing."
+
+Amanak can say:
+
+> **"الرسالة دي شكلها محاولة تاخد بيانات حسابك."**
+
+---
+
+### 🇬🇧 English Support
+
+If the user communicates in English, Amanak can respond in English.
+
+```text
+⚠️ High Risk
+
+This message contains several phishing indicators:
+
+• Suspicious link
+• Urgency
+• Request for sensitive information
+• Untrusted domain
+
+Do not click the link or provide credentials.
+```
+
+---
+
+# 📱 Supported Interfaces
+
+| Interface           | Status      |
+| ------------------- | ----------- |
+| Telegram            | ✅           |
+| Web                 | ✅           |
+| WhatsApp            | 🧪 Optional |
+| Messenger           | 🗺️ Planned |
+| SMS workflows       | 🗺️ Planned |
+| OCR                 | 🧪 Optional |
+| Voice transcription | 🧪 Optional |
+
+---
+
+#  Detection Pipeline
+
+Amanak uses a layered analysis pipeline rather than relying on a single AI model.
+
+```text
+                    ┌──────────────────┐
+                    │   User Message   │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Input Processing │
+                    └────────┬─────────┘
+                             │
+              ┌──────────────┼──────────────┐
+              ▼              ▼              ▼
+        ┌──────────┐   ┌───────────┐   ┌──────────┐
+        │ Message │   │ URL / Link │   │ Metadata │
+        │ Analysis │   │  Analysis  │   │ Analysis │
+        └────┬─────┘   └─────┬─────┘   └────┬─────┘
+             │               │              │
+             └───────────────┼──────────────┘
+                             ▼
+                    ┌──────────────────┐
+                    │  Rules Engine    │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │ Risk Calculation │
+                    └────────┬─────────┘
+                             │
+                    ┌────────┴────────┐
+                    ▼                 ▼
+             ┌────────────┐   ┌─────────────┐
+             │ Risk Level │   │ Explanation │
+             └─────┬──────┘   └──────┬──────┘
+                   │                 │
+                   └────────┬────────┘
+                            ▼
+                    ┌──────────────────┐
+                    │ Egyptian Arabic  │
+                    │ Response Layer   │
+                    └────────┬─────────┘
+                             │
+                             ▼
+                    ┌──────────────────┐
+                    │      User        │
+                    └──────────────────┘
+```
+
+---
+
+# 🏗️ Architecture
 
 ```mermaid
-flowchart LR
+flowchart TD
+
+    User[👤 User]
+
+    Telegram[Telegram]
+    WhatsApp[WhatsApp Cloud API]
+    Web[Web Interface]
+
+    Core[Amanak Core]
+
+    Rules[Rule Engine]
+    Links[URL Risk Analyzer]
+    AI[Optional AI Explanation]
+    Privacy[Privacy / Redaction Layer]
+
+    DB[(SQLite)]
+
+    API[FastAPI]
+    Dashboard[Anonymous Dashboard]
+
     User --> Telegram
     User --> WhatsApp
     User --> Web
-    Web --> FastAPI
-    Telegram --> AmanakCore
-    WhatsApp --> AmanakCore
-    FastAPI --> AmanakCore
-    AmanakCore --> Rules
-    AmanakCore --> Links
-    AmanakCore --> AI[Optional AI explanation]
-    AmanakCore --> SQLite
-    FastAPI --> Dashboard
+
+    Telegram --> Core
+    WhatsApp --> Core
+    Web --> API
+
+    API --> Core
+
+    Core --> Privacy
+    Core --> Rules
+    Core --> Links
+    Core --> AI
+
+    Core --> DB
+
+    API --> Dashboard
 ```
 
-## Setup
+---
+
+#  Security Philosophy
+
+Amanak is designed around **data minimization**.
+
+The system should not need to know who the user is in order to determine whether a message looks suspicious.
+
+### By default, Amanak does NOT store:
+
+* Full user identity
+* Passwords
+* Authentication tokens
+* Payment credentials
+* Raw messages
+* Contact lists
+* Personal address books
+
+Instead, the system can retain limited anonymous metadata required for analytics and abuse prevention.
+
+Example:
+
+```json
+{
+  "platform": "telegram",
+  "verdict": "high_risk",
+  "scam_type": "phishing",
+  "risk_score": 87,
+  "timestamp": "2026-10-07T00:00:00Z"
+}
+```
+
+User identifiers should be represented using a **salted hash** rather than storing the original identifier.
+
+---
+
+# 🧹 Privacy / Redaction Layer
+
+When a user explicitly reports a suspicious message, sensitive information should be removed before storage.
+
+Example:
+
+```text
+Before:
+
+"Your account 123456789 has been suspended.
+Call 01012345678 or email attacker@example.com."
+
+After:
+
+"Your account [ACCOUNT_NUMBER] has been suspended.
+Call [PHONE] or email [EMAIL]."
+```
+
+Potentially sensitive fields include:
+
+```text
+PHONE NUMBER
+EMAIL ADDRESS
+ACCOUNT NUMBER
+NATIONAL ID
+CARD NUMBER
+OTP
+PASSWORD
+AUTHENTICATION TOKEN
+```
+
+---
+
+#  Risk Levels
+
+Amanak uses understandable risk categories.
+
+### 🟢 Low Risk
+
+No major scam indicators detected.
+
+### 🟡 Suspicious
+
+Some indicators are present.
+
+The user should verify the information independently.
+
+### 🟠 High Risk
+
+Multiple scam indicators detected.
+
+The user should avoid clicking links or providing information.
+
+### 🔴 Critical
+
+Strong indicators of phishing, impersonation, payment fraud, or credential theft.
+
+The user should stop interacting with the sender and verify through an official channel.
+
+---
+
+# 🤖 Optional AI Layer
+
+AI is **not required for the core detection engine**.
+
+The rules engine remains the primary decision-making component.
+
+The optional AI layer can:
+
+* Explain why a message is suspicious
+* Translate technical findings into Egyptian Arabic
+* Generate user-friendly recommendations
+* Improve explanation quality
+
+The AI layer should **not blindly override deterministic security rules**.
+
+A recommended architecture is:
+
+```text
+Rules Engine
+     │
+     ▼
+Risk Score
+     │
+     ├──────────────► Final Verdict
+     │
+     ▼
+Optional AI
+     │
+     ▼
+Human-friendly Explanation
+```
+
+This keeps the system useful even when the AI service is unavailable.
+
+---
+
+#  Example
+
+### User
+
+```text
+مبروك! كسبت 50,000 جنيه 🎉
+اضغط هنا لتأكيد استلام الجائزة:
+https://example-suspicious-domain.com/winner
+```
+
+### Amanak
+
+```text
+🚨 خلي بالك — الرسالة دي غالبًا نصب.
+
+درجة الخطورة: 🔴 عالية
+
+الأسباب:
+• بتقول إنك كسبت جائزة غير متوقعة
+• بتطلب منك الضغط على لينك
+• فيها استعجال لتأكيد الاستلام
+• الرابط مش واضح إنه تابع لجهة رسمية
+
+❌ متضغطش على اللينك.
+❌ متبعتش بيانات البطاقة أو الحساب.
+❌ متحولش أي فلوس علشان "تستلم الجائزة".
+
+لو الجائزة حقيقية، ادخل على الموقع الرسمي للجهة بنفسك
+بدل الضغط على الرابط الموجود في الرسالة.
+```
+
+---
+
+# 📊 Anonymous Dashboard
+
+Amanak can provide an administrative dashboard containing aggregated statistics.
+
+Possible metrics:
+
+```text
+Messages analyzed
+        ↓
+Scams detected
+        ↓
+Phishing attempts
+        ↓
+Suspicious URLs
+        ↓
+Top scam categories
+        ↓
+Platform distribution
+```
+
+Example:
+
+| Metric              |  Value |
+| ------------------- | -----: |
+| Messages analyzed   | 12,481 |
+| High-risk messages  |  3,104 |
+| Suspicious URLs     |  2,217 |
+| Phishing attempts   |  1,486 |
+| Prize scams         |    623 |
+| Fake delivery scams |    411 |
+
+The dashboard should avoid exposing individual users or message contents.
+
+---
+
+# 🛠️ Tech Stack
+
+### Backend
+
+* Python 3.11+
+* FastAPI
+* SQLite
+* Pydantic
+
+### Messaging
+
+* Telegram Bot API
+* WhatsApp Cloud API *(optional)*
+
+### Analysis
+
+* Rule-based detection
+* URL analysis
+* Optional AI explanation
+* OCR *(optional)*
+* Speech-to-text *(optional)*
+
+### Deployment
+
+* Uvicorn
+* Docker
+* Render
+* Any compatible Linux server
+
+---
+
+# ⚡ Quick Start
+
+## 1. Clone the repository
+
+```bash
+git clone https://github.com/YOUR_USERNAME/amanak.git
+cd amanak
+```
+
+## 2. Create a virtual environment
 
 ### Windows
 
-1. Install Python 3.11+
-2. Create a virtual environment:
-   - python -m venv .venv
-   - .venv\Scripts\activate
-3. Install dependencies:
-   - pip install -r requirements.txt
-4. Copy .env.example to .env and edit values.
-5. Run the app:
-   - uvicorn main:app --reload
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
 
-### Mac/Linux
+### Linux / macOS
 
-1. Python 3.11+
-2. python3 -m venv .venv
-3. source .venv/bin/activate
-4. pip install -r requirements.txt
-5. cp .env.example .env
-6. uvicorn main:app --reload
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
 
-## Telegram bot setup
+## 3. Install dependencies
 
-1. Open Telegram and message @BotFather.
-2. Run /newbot and choose a name.
-3. Copy the token.
-4. Save it to TELEGRAM_TOKEN in the .env file.
-5. Optional: set a webhook URL or use polling mode during local testing.
-6. Suggested usernames: AmanakBot or Amanak_Egypt_bot.
+```bash
+pip install -r requirements.txt
+```
 
-## WhatsApp Cloud API setup (optional)
+## 4. Configure environment variables
 
-1. Create a Meta app and enable WhatsApp.
-2. Add the verify token and app secret to .env.
-3. Set ENABLE_WHATSAPP=true.
-4. Configure your webhook with the public URL and verify token.
-5. Make sure the app verifies the X-Hub-Signature-256 header.
+```bash
+cp .env.example .env
+```
 
-## Running tests
+Windows:
+
+```powershell
+copy .env.example .env
+```
+
+Edit `.env`:
+
+```env
+TELEGRAM_TOKEN=your_bot_token
+
+ENABLE_WHATSAPP=false
+
+DATABASE_URL=sqlite:///./amanak.db
+
+AI_ENABLED=false
+```
+
+## 5. Start the server
+
+```bash
+uvicorn main:app --reload
+```
+
+Amanak should now be available locally.
+
+```text
+http://127.0.0.1:8000
+```
+
+---
+
+# 🤖 Telegram Setup
+
+1. Open Telegram.
+2. Search for **@BotFather**.
+3. Run:
+
+```text
+/newbot
+```
+
+4. Choose the bot name.
+5. Copy the generated token.
+6. Add it to `.env`:
+
+```env
+TELEGRAM_TOKEN=YOUR_TOKEN
+```
+
+7. Start Amanak.
+
+For local development, polling can be used.
+
+For production, configure a secure HTTPS webhook.
+
+### Example commands
+
+```text
+/start
+/help
+/check
+/report
+/privacy
+```
+
+---
+
+# 📲 WhatsApp Cloud API
+
+WhatsApp support is optional and can remain disabled during development.
+
+```env
+ENABLE_WHATSAPP=false
+```
+
+To enable it:
+
+```env
+ENABLE_WHATSAPP=true
+```
+
+The production webhook should:
+
+1. Verify the webhook challenge.
+2. Validate `X-Hub-Signature-256`.
+3. Reject invalid requests.
+4. Rate-limit incoming events.
+5. Sanitize incoming content.
+6. Pass the message to Amanak Core.
+
+---
+
+# 🧪 Testing
+
+Run the complete test suite:
 
 ```bash
 pytest -q
+```
+
+Run the accuracy sanity check:
+
+```bash
 python scripts/run_accuracy.py
 ```
 
-## Deployment
+Recommended tests include:
 
-- Local: uvicorn main:app --host 0.0.0.0 --port 8000
-- Docker: docker build -t amanak . && docker run -p 8000:8000 amanak
-- Render: use render.yaml as the starting point and configure environment variables in the dashboard.
+```text
+✓ obvious phishing
+✓ fake prize message
+✓ fake delivery message
+✓ bank impersonation
+✓ legitimate bank message
+✓ suspicious URL
+✓ URL shortener
+✓ Arabic message
+✓ English message
+✓ mixed Arabic/English
+✓ empty input
+✓ malformed URL
+✓ rate limiting
+✓ webhook signature validation
+✓ privacy redaction
+```
 
-## Privacy
+---
 
-Amanak does not store raw message text by default. The system stores only limited metadata like time, platform, verdict, scam type, score, and a salted hash of the user ID. Raw text is stored only when the user explicitly triggers a report after masking phone numbers, emails, account numbers, and IDs.
+# 🐳 Docker
 
-## Limitations
+Build:
 
-- A rules-only engine can still make mistakes.
-- The system is designed for family safety guidance, not legal or financial certainty.
-- Synthetic accuracy is a sanity check, while real-world data depends on what families actually receive.
-- The optional AI explanation is not required and should only adjust decisions by one level when enabled.
+```bash
+docker build -t amanak .
+```
 
-## Roadmap
+Run:
 
-- Messenger support
-- SMS verification flows
-- More Egyptian dialect coverage
-- Better OCR and voice transcription
-- Better family alert workflows
+```bash
+docker run --env-file .env -p 8000:8000 amanak
+```
 
-## Contributing
+---
 
-Pull requests are welcome. Keep changes focused, add tests, and avoid storing user secrets in code or repo files.
+# ☁️ Deployment
 
-## License
+Amanak can be deployed to services supporting Python applications or containers.
 
-This project is provided as a prototype for educational and humanitarian use. It is not a legal or financial advisory service.
+Example:
+
+```text
+                    ┌───────────────┐
+                    │    Internet   │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │ HTTPS / Proxy │
+                    └───────┬───────┘
+                            │
+                            ▼
+                    ┌───────────────┐
+                    │    FastAPI    │
+                    └───────┬───────┘
+                            │
+              ┌─────────────┼─────────────┐
+              ▼             ▼             ▼
+          Telegram      Amanak Core     Dashboard
+                            │
+                     ┌──────┴──────┐
+                     ▼             ▼
+                  SQLite       URL Analysis
+```
+
+---
+
+# 🚦 Rate Limiting & Abuse Protection
+
+Public deployments should implement rate limiting to prevent abuse.
+
+Recommended controls:
+
+```text
+Per-user rate limit
+        +
+Per-IP rate limit
+        +
+Webhook validation
+        +
+Input size limits
+        +
+URL limits
+        +
+Request timeout
+```
+
+The Telegram bot should also reject excessively large payloads.
+
+---
+
+# ⚠️ Important Limitations
+
+Amanak is a **risk-assessment tool**, not an oracle.
+
+A legitimate message can sometimes look suspicious.
+
+A sophisticated scam can sometimes bypass automated detection.
+
+Therefore:
+
+> **Amanak should help users pause and verify — not make irreversible financial decisions for them.**
+
+For financial, government, banking, or account-security messages, users should verify information through the organization's official website, application, phone number, or physical branch.
+
+---
+
+# 🗺️ Roadmap
+
+### Phase 1 — Core
+
+* [x] Rule-based scam detection
+* [x] URL analysis
+* [x] Egyptian Arabic responses
+* [x] English fallback
+* [x] Telegram support
+* [x] SQLite metadata storage
+
+### Phase 2 — Protection
+
+* [ ] Improved phishing detection
+* [ ] Domain reputation intelligence
+* [ ] Look-alike domain detection
+* [ ] OCR
+* [ ] Voice transcription
+* [ ] Better abuse prevention
+* [ ] Family safety alerts
+
+### Phase 3 — Expansion
+
+* [ ] WhatsApp production integration
+* [ ] Messenger
+* [ ] SMS workflows
+* [ ] More Egyptian dialect patterns
+* [ ] Community reporting
+* [ ] Scam trend intelligence
+
+### Phase 4 — Intelligence
+
+* [ ] Improved contextual analysis
+* [ ] Scam campaign clustering
+* [ ] Anonymous threat intelligence
+* [ ] Real-time scam trend detection
+* [ ] Community-driven detection rules
+
+---
+
+# ❤️ Built for Families
+
+Amanak is intentionally designed around a simple idea:
+
+> **Cybersecurity shouldn't require technical knowledge.**
+
+A parent shouldn't need to understand:
+
+```text
+phishing
+social engineering
+homograph attacks
+URL reputation
+credential harvesting
+domain spoofing
+```
+
+They should be able to ask:
+
+> **"الرسالة دي نصب ولا لأ؟"**
+
+And receive an answer they can understand.
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome.
+
+Before submitting a pull request:
+
+* Keep changes focused.
+* Add tests for new detection rules.
+* Do not commit secrets.
+* Do not commit real user messages.
+* Do not add unnecessary personal-data collection.
+* Document new detection logic.
+* Preserve privacy-by-default behavior.
+
+### Development principles
+
+```text
+Security first
+Privacy first
+Simple UX
+Explainable detection
+Minimal data collection
+Test everything
+```
+
+---
+
+#  Security
+
+If you discover a security vulnerability in Amanak, please do not publicly disclose sensitive details before giving the maintainers an opportunity to investigate.
+
+Security reports should include:
+
+* Affected component
+* Reproduction steps
+* Expected behavior
+* Actual behavior
+* Security impact
+* Suggested remediation, if available
+
+Do not include real victims' personal information, credentials, financial information, or private messages in a report.
+
+---
+
+# 📜 License
+
+Amanak is provided as a prototype for **educational and humanitarian purposes**.
+
+It is not a:
+
+* Legal service
+* Financial advisory service
+* Banking security service
+* Emergency-response service
+
+The software is intended to help people **identify suspicious communication and pause before taking risky actions**.
+
+---
+
+# 🇪🇬 Amanak
+
+### أمانك — قبل ما تثق، اسأل.
+
+**A free, privacy-conscious scam-checking assistant built for Egyptian families.**
+
+> **Your family's second opinion on suspicious messages.**
