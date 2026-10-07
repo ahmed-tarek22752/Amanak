@@ -67,9 +67,9 @@ The goal is to explain **why** the message is suspicious and tell the user **wha
 
 ---
 
-# 🚀 Core Features
+#  Core Features
 
-### 🔍 Scam Detection
+###  Scam Detection
 
 Rule-based analysis identifies common scam indicators including:
 
