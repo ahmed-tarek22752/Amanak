@@ -765,6 +765,12 @@ And receive an answer they can understand.
 
 ---
 
+<p align="center">
+  <img src="/data/amanak00.png"
+       alt="Wireless Network Security Research"
+       width="100%">
+</p>
+
 # 🤝 Contributing
 
 Contributions are welcome.
