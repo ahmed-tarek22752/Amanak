@@ -59,7 +59,18 @@ Amanak analyzes the message and returns:
 ❌ متحولش فلوس
 
 لو مش متأكد، تواصل مع الجهة الرسمية من موقعها الحقيقي.
+
+
+
+
+
 ```
+
+<p align="center">
+  <img src="/data/amanak0.png"
+       alt="Wireless Network Security Research"
+       width="100%">
+</p>
 
 The goal is not simply to say **"scam"**.
 
