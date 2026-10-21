@@ -6,11 +6,22 @@
 
 <p align="center">
   <img src="/data/Amanak_%20Your%20Family’s%20Scam%20Shield.png"
-       alt="Wireless Network Security Research"
+       alt="Amanak — Your Family’s Scam Shield"
        width="100%">
 </p>
+
 > **"قبل ما تدفع، ابعت لأمانك."**
 > *Before you pay, send it to Amanak.*
+
+---
+
+## 🎬 Promo Video
+
+<p align="center">
+  <img src="data/amanak-promo.svg"
+       alt="Amanak promo video — Before you pay, send it to Amanak"
+       width="100%">
+</p>
 
 ---
 
@@ -59,16 +70,11 @@ Amanak analyzes the message and returns:
 ❌ متحولش فلوس
 
 لو مش متأكد، تواصل مع الجهة الرسمية من موقعها الحقيقي.
-
-
-
-
-
 ```
 
 <p align="center">
   <img src="/data/amanak0.png"
-       alt="Wireless Network Security Research"
+       alt="Amanak bot replying to a suspicious message"
        width="100%">
 </p>
 
@@ -78,9 +84,9 @@ The goal is to explain **why** the message is suspicious and tell the user **wha
 
 ---
 
-#  Core Features
+# Core Features
 
-###  Scam Detection
+### Scam Detection
 
 Rule-based analysis identifies common scam indicators including:
 
@@ -156,7 +162,7 @@ Do not click the link or provide credentials.
 
 ---
 
-#  Detection Pipeline
+# Detection Pipeline
 
 Amanak uses a layered analysis pipeline rather than relying on a single AI model.
 
@@ -254,7 +260,7 @@ flowchart TD
 
 ---
 
-#  Security Philosophy
+# Security Philosophy
 
 Amanak is designed around **data minimization**.
 
@@ -320,15 +326,14 @@ AUTHENTICATION TOKEN
 ```
 
 ---
+
 <p align="center">
   <img src="data/Amanak_%20Secure%20Family%20Scam%20Protection.png"
-       alt="Wireless Network Security Research"
+       alt="Amanak — Secure Family Scam Protection"
        width="100%">
 </p>
 
-
-
-#  Risk Levels
+# Risk Levels
 
 Amanak uses understandable risk categories.
 
@@ -392,7 +397,7 @@ This keeps the system useful even when the AI service is unavailable.
 
 ---
 
-#  Example
+# Example
 
 ### User
 
@@ -423,18 +428,15 @@ https://example-suspicious-domain.com/winner
 بدل الضغط على الرابط الموجود في الرسالة.
 ```
 
-
 <p align="center">
   <img src="/data/Amanak%20Scam-Checking%20Bot%20Interface.png"
-       alt="Wireless Network Security Research"
+       alt="Amanak scam-checking bot interface"
        width="100%">
 </p>
 
-
-
 ---
 
-#  Dashboard
+# Dashboard
 
 Amanak can provide an administrative dashboard containing aggregated statistics.
 
@@ -505,8 +507,8 @@ The dashboard should avoid exposing individual users or message contents.
 ## 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/amanak.git
-cd amanak
+git clone https://github.com/ahmed-tarek22752/Amanak.git
+cd Amanak
 ```
 
 ## 2. Create a virtual environment
@@ -630,7 +632,7 @@ The production webhook should:
 
 ---
 
-#  Testing
+# Testing
 
 Run the complete test suite:
 
@@ -736,8 +738,6 @@ Request timeout
 
 The Telegram bot should also reject excessively large payloads.
 
-
-
 ---
 
 # ❤️ Built for Families
@@ -767,7 +767,7 @@ And receive an answer they can understand.
 
 <p align="center">
   <img src="/data/amanak00.png"
-       alt="Wireless Network Security Research"
+       alt="Amanak — built for families"
        width="100%">
 </p>
 
@@ -798,7 +798,7 @@ Test everything
 
 ---
 
-#  Security
+# Security
 
 If you discover a security vulnerability in Amanak, please do not publicly disclose sensitive details before giving the maintainers an opportunity to investigate.
 
@@ -813,6 +813,7 @@ Security reports should include:
 
 Do not include real victims' personal information, credentials, financial information, or private messages in a report.
 
+---
 
 # 🇪🇬 Amanak
 
