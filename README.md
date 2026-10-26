@@ -800,7 +800,7 @@ Test everything
 
 # Security
 
-If you discover a security vulnerability in Amanak, please do not publicly disclose sensitive details before giving the maintainers an opportunity to investigate.
+If you discover a security vulnerability in Amanak, please do not publicly disclose sensitive details before giving the maintainers an opportunity to investigate on email.
 
 Security reports should include:
 
