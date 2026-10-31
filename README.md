@@ -42,7 +42,7 @@ A message may claim:
 
 For technically experienced users, these messages may be obvious.
 
-For parents, grandparents, and less technical family members, they may look completely legitimate.
+For parents, grandparents, and less technical family members, they may look  legitimate.
 
 **Amanak provides a simple second opinion before the user clicks, pays, or shares information.**
 
