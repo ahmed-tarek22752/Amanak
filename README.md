@@ -294,7 +294,7 @@ User identifiers should be represented using a **salted hash** rather than stori
 
 ---
 
-# 🧹 Privacy / Redaction Layer
+#  Privacy / Redaction Layer
 
 When a user explicitly reports a suspicious message, sensitive information should be removed before storage.
 
