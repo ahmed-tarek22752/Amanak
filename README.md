@@ -38,7 +38,7 @@ A message may claim:
 * 📱 Your WhatsApp account is at risk
 * 🧾 You have an unpaid bill
 * 👨‍👩‍👧 A family member urgently needs Money
-* 🔗 You need to click a link to "confirm" something
+* 🔗 You need to click a link to "confirm" something.
 
 For technically experienced users, these messages may be obvious.
 
