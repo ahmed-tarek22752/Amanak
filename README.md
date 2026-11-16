@@ -438,7 +438,7 @@ https://example-suspicious-domain.com/winner
 
 # Dashboard
 
-Amanak can provide an administrative dashboard containing aggregated statistics.
+Amanak can provide an administrative dashboard containing aggregated statistics..
 
 Possible metrics:
 
