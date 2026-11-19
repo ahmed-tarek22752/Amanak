@@ -80,7 +80,7 @@ Amanak analyzes the message and returns:
 
 The goal is not simply to say **"scam"**.
 
-The goal is to explain **why** the message is suspicious and tell the user **what to do next**.
+The goal is to explain **why** the message is suspicious and tell the user **what to do in next step**.
 
 ---
 
