@@ -520,7 +520,7 @@ python -m venv .venv
 .venv\Scripts\activate
 ```
 
-### Linux / macOS
+### Linux / MacOS
 
 ```bash
 python3 -m venv .venv
