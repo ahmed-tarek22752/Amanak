@@ -50,7 +50,7 @@ For parents, grandparents, and less technical family members, they may look  leg
 
 # ✨ What Amanak Does
 
-A user can forward a suspicious message to Amanak.
+A user can forward a suspicious message to Amanak,
 
 Amanak analyzes the message and returns:
 
